@@ -57,7 +57,7 @@ if args.kmer_feats is not 'none':
     c_freqs = c_kmers.div(c_sums, axis=0)
 
     # compute differences
-    diffs = p_freqs.add(c_freqs * -1)
+    diffs = p_freqs - c_freqs
 
     # if using full profile, get abs distance and concat
     if args.kmer_feats == 'profile':
